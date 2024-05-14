@@ -1,1 +1,292 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --blue-1: #3C429E;
+    --blue-2: #5E6BFF;
+    --yellow: #FFD700;
+    --white: #FFFFFF;
+    --grey: #ababab;
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    --text-color: #fdfce6;
+
+
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--red-to-pink-to-purple-horizontal-gradient);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+  }
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--red-to-pink-to-purple-horizontal-gradient);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: background 0.3s ease;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 10px var(--shadow-dark);
+
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--red-to-pink-to-purple-horizontal-gradient) 15%, transparent);
+  }
+
+  .pill-group .pill:nth-child(6n + 1) {
+    --pill-accent: var(--hot-red);
+  }
+  .pill-group .pill:nth-child(6n + 2) {
+    --pill-accent: var(--french-violet);
+  }
+  .pill-group .pill:nth-child(6n + 3),
+  .pill-group .pill:nth-child(6n + 4),
+  .pill-group .pill:nth-child(6n + 5) {
+    --pill-accent: var(--hot-red);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: var(--gray-900);
+  }
+
+
+/* 
+
+
+
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue-1);
+    justify-content: center;
+}
+
+.container {
+    max-width: 450px;
+    min-width: 300px;
+    height: 80vh;
+    min-height: 540px;
+    background-color: var(--blue-2);
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px var(--shadow-dark);
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.upper-data {
+    width: 100%;
+    height: 50%;
+    border-bottom: 3px solid black;
+}
+
+.upper-data > img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.weather-data {
+    position: relative;
+    top: -72%;
+    justify-content: center;
+    /* need to change positioning? */
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    color: var(--text-color);
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.location {
+
+}
+
+.temperature {
+    font-size: 2em;
+}
+
+/* The formatting on the boxes is not working right. The margin creates a weird resize to the boxes via media query */
+.lower-data {
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    justify-content: center;
+    /* margin: 10px;
+    gap: 10px; */
+}
+
+.card {
+    border: 5px solid var(--blue-1);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+.card-icon > img {
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px var(--shadow-dark);
+    width: 3.5em;
+    height: 3.5em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-data {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: large;
+    color:var(--text-color);
+}
+
+@media screen and (max-width: 450px) {
+    /* .container {
+        width: 310px;
+    } */
+    
+    /* .lower-data {
+        width: 95%;
+        height: 45%;
+        margin: 10px;
+        gap: 10px;
+    } */
+    
+}
+
