@@ -1,4 +1,38 @@
-# WeatherAppLive
+# resource
+
+https://www.youtube.com/watch?v=psZXU8PTAS8
+    
+# to build the weather service files in src/app/services
+ng g s weather 
+
+
+@CalebeCopello
+4 months ago
+For those struggling with the module part 24:17
+start the project with the cli:
+ng new my-app --no-standalone --routing
+
+
+
+@serenitytales24
+1 year ago
+for those who are trying to follow this tutorial and facing a problem since things changed from whe he made it.
+Few points in here:
+look for "Open Weather API" instead of the one in the video.
+In weather service file , here is the method since the get method changed for this one so I modified it accordingly:
+ getWeatherData(cityName:string):Observable<WeatherData>{
+    return this.http.get<WeatherData>(environment.weatherApiBaseUrl+'/city/'+cityName, {
+      headers: new HttpHeaders()
+      .set(environment.XRapidAPIHostHeaderName, environment.XRapidAPIHostHeaderValue)
+      .set(environment.XRapidAPIKeyHeaderName,environment.XRapidAPIKeyHeaderValue),
+    });
+   }
+
+
+
+
+
+# WeatherApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
